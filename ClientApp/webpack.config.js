@@ -33,6 +33,13 @@ module.exports = {
     module: {
         rules: [
             { test: /\.css$/, use: [{ loader: MiniCssExtractPlugin.loader }, 'css-loader'] },
+            {
+                test: /\.(js|jsx)$/,
+                exclude: /[\\/]node_modules[\\/]/,
+                use: {
+                    loader: 'babel-loader',
+                },
+            },
             { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, use: ['file-loader'] },
             {
                 test: /\.(woff|woff2)$/, use: [
