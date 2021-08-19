@@ -11,3 +11,8 @@ This project is a practice/test with an ASP .NET MVC project that uses the webpa
 ## Requirements to build
 - .NET 5 on your computer.
 - NodeJs and npm (it is available with NodeJs download).
+
+### Build the project.
+If you have the basic requirements for the project you only build the ASP .NET MVC project, it automatically verify if you have NodeJs installed, and then executes the **npm install** command and makes the first bundle for development environment executing the **npm run build-dev** command that refers to one of the scripts in the **package.json** file to execute the webpack bundler.
+
+Also if you want to do manually you can go to the **ClientApp** directory of the MVC project and execute the **npm install** command in the CLI and later the **npm run build-dev** (or build-prod for production) command to bundle client side files.
