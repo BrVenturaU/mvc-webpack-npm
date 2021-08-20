@@ -4,9 +4,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - WebpackMvc</title>
-    <script type="module" src="~/dist/site.entry.js" defer></script>
+    <script type="module" src="~/dist/site.bundle.js" asp-append-version="true" defer></script>
     @await RenderSectionAsync("Scripts", required: false)
-    <link rel="stylesheet" href="~/dist/site.css">
+    <link rel="stylesheet" href="~/dist/site.bundle.css"  asp-append-version="true">
 </head>
 <body>
     <header>
