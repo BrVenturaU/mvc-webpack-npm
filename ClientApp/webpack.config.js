@@ -1,7 +1,7 @@
 ﻿const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const NodePolyfillPlugin = require("node-polyfill-webpack-plugin")
+const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
 const Dotenv = require('dotenv-webpack');
 
 module.exports = {
@@ -27,7 +27,7 @@ module.exports = {
         index: './src/js/index.js'
     },
     output: {
-        filename: '[name].entry.js',
+        filename: '[name].bundle.js',
         path: path.resolve(__dirname, '..', 'wwwroot', 'dist')
     },
     module: {
@@ -77,7 +77,7 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: "[name].css"
+            filename: "[name].bundle.css"
         }),
         new NodePolyfillPlugin(),
         new Dotenv({ systemvars: true }),
