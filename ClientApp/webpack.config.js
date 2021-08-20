@@ -2,7 +2,6 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
-const Dotenv = require('dotenv-webpack');
 
 module.exports = {
     resolve: {
@@ -80,7 +79,6 @@ module.exports = {
             filename: "[name].bundle.css"
         }),
         new NodePolyfillPlugin(),
-        new Dotenv({ systemvars: true }),
         new CleanWebpackPlugin()
     ]
 };

@@ -9,6 +9,7 @@ const numbers3 = [...numbers1, ...numbers2];
 
 printTestMessage("hola desde modulo");
 console.log(process.env.Prueba)
+console.log(process.env.TEST)
 console.log(process.env.NODE_ENV || "development");
 console.log(numbers3.join(','));
 console.log('The \'site\' bundle has been loaded!');
