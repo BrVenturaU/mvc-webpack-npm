@@ -29,6 +29,7 @@
   "scripts": {
     "build-prod": "webpack --config=webpack.config.prod.js",
     "build-dev": "webpack --config=webpack.config.dev.js",
+    "build-test": "webpack --config=webpack.config.test.js",
     "watch": "webpack --config=webpack.config.dev.js --watch"
   }
 }
